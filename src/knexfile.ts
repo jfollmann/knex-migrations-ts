@@ -9,10 +9,6 @@ const config: Knex.Config = {
     password: 'pass@123!',
     database: 'knexDB',
   },
-  pool: {
-    min: 2,
-    max: 10,
-  },
   migrations: {
     extension: 'ts',
     directory: 'knex/migrations',
