@@ -9,7 +9,7 @@ export async function up(knex: Knex): Promise<void> {
     table.string('firstName', 100).notNullable();
     table.string('lastName', 100).notNullable();
 
-    defaultHistoryFields(knex, tableName, table);
+    defaultHistoryFields(knex, table);
   });
 
   await knex.raw(createOnUpdateTrigger(tableName));

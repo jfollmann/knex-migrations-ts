@@ -17,7 +17,7 @@ export const hasRecords = async (knex: Knex, tableName: string): Promise<boolean
   return count > 0;
 };
 
-export const defaultHistoryFields = (knex: Knex, tableName: string, table: CreateTableBuilder): void => {
+export const defaultHistoryFields = (knex: Knex, table: CreateTableBuilder): void => {
   table.boolean('active').defaultTo(true);
 
   table.timestamp('createdAt').notNullable().defaultTo(knex.fn.now());

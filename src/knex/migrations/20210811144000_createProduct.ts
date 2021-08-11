@@ -12,7 +12,7 @@ export async function up(knex: Knex): Promise<void> {
       .references('id')
       .inTable('user');
 
-    defaultHistoryFields(knex, tableName, table);
+    defaultHistoryFields(knex, table);
   });
 
   await knex.raw(createOnUpdateTrigger(tableName));
