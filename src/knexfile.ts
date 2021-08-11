@@ -15,12 +15,12 @@ const config: Knex.Config = {
   },
   migrations: {
     extension: 'ts',
-    directory: 'src/knex/migrations',
+    directory: 'knex/migrations',
     tableName: 'migrations_history',
   },
   seeds: {
     extension: 'ts',
-    directory: 'src/knex/seeds',
+    directory: 'knex/seeds',
   },
 };
 

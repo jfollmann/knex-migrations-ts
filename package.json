@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "migrate:latest": "knex migrate:latest",
-    "migrate:rollback": "knex migrate:rollback --all",
-    "seed:run": "knex seed:run"
+    "migrate:latest": "knex --knexfile src/knexfile.ts migrate:latest",
+    "migrate:rollback": "knex --knexfile src/knexfile.ts migrate:rollback --all",
+    "seed:run": "knex --knexfile src/knexfile.ts seed:run"
   },
   "keywords": [],
   "author": "",
