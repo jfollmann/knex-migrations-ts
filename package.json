@@ -1,0 +1,28 @@
+{
+  "name": "knex-migrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate:latest": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback --all",
+    "seed:run": "knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.21.21",
+    "pg": "^8.7.1",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.13",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0"
+  }
+}
