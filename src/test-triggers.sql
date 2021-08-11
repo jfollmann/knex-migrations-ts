@@ -4,6 +4,7 @@ where "firstName" = 'Jefferson'
 
 update "user" 
   set active = false 
-where "firstName" = 'Jefferson'
+where "firstName" = 'Antônio'
 
-select * from "user"
+select * 
+from "user"
