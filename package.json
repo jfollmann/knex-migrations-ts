@@ -9,10 +9,10 @@
     "migrate:currentVersion": "npm run knex:run -- migrate:currentVersion",
     "migrate:list": "npm run knex:run -- migrate:list",
     "migrate:make": "npm run knex:run -- migrate:make --",
-    "migrate:latest": "npm run knex:run -- migrate:latest",
-    "migrate:rollback": "npm run knex:run -- migrate:rollback --all",
+    "migrate:latest": "npm run knex:run -- migrate:latest --debug",
+    "migrate:rollback": "npm run knex:run -- migrate:rollback --all --debug",
     "seed:make": "npm run knex:run -- seed:make --",
-    "seed:run": "npm run knex:run -- seed:run"
+    "seed:run": "npm run knex:run -- seed:run --debug"
   },
   "keywords": [],
   "author": "",
