@@ -1,4 +1,3 @@
-/* eslint-disable dot-notation */
 import Knex, { CreateTableBuilder } from 'knex';
 
 export const createOnUpdateTrigger = (tableName: string) => `
@@ -11,14 +10,8 @@ export const deleteOnUpdateTrigger = (tableName: string) => `
   DROP TRIGGER "${tableName}_updated_at" ON "${tableName}";
 `;
 
-export const hasRecords = async (knex: Knex, tableName: string): Promise<boolean> => {
-  const [{ count }] = await knex(tableName).count();
-
-  return count > 0;
-};
-
 export const defaultHistoryFields = (knex: Knex, table: CreateTableBuilder): void => {
-  table.boolean('active').defaultTo(true);
+  table.boolean('active').notNullable().defaultTo(true);
 
   table.timestamp('createdAt').notNullable().defaultTo(knex.fn.now());
   table.timestamp('updatedAt').notNullable().defaultTo(knex.fn.now());
