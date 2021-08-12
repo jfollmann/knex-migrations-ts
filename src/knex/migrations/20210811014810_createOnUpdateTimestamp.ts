@@ -8,6 +8,7 @@ const ON_UPDATE_TIMESTAMP_FUNCTION = `
     NEW."updatedAt" = now();
 
     IF (NEW.active = false) THEN
+      NEW."updatedAt" = OLD."updatedAt";
       NEW."deletedAt" = now();
     END IF;
 
