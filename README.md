@@ -10,7 +10,7 @@ docker-compose up -d
 
 ### Create your db in `PostgreSQL`:
 ```sql
-create database knexDB
+create database "knexDB"
 ```
 
 ## ☕ Migrations
